@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -145,7 +148,14 @@ public class cadastroVIEW extends javax.swing.JFrame {
         String valor = cadastroValor.getText();
         String status = "A Venda";
         produto.setNome(nome);
-        produto.setValor(Integer.parseInt(valor));
+        
+        try {
+            produto.setValor(Integer.parseInt(valor));
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Informe um valor numérico válido.");
+            return;
+        }
+        
         produto.setStatus(status);
         
         ProdutosDAO produtodao = new ProdutosDAO();
