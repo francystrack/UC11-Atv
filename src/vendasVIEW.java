@@ -35,8 +35,7 @@ public class vendasVIEW extends javax.swing.JFrame {
         listaProdutos = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(546, 489));
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         listaProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
